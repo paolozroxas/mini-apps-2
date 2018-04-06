@@ -10,7 +10,7 @@ app.use(cors());
 app.get('/api/eth', (req, res) => {
   db.getTodayPrices()
     .then((prices) => {
-      res.send([currentPrice, prices]);
+      res.send(prices);
     })
 })
 
